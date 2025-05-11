@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  font-family: Arial, Helvetica, sans-serif; /* Clean font */
+  background-color: rgb(0, 0, 0); /* Dark theme */
+  padding: 60px 5px 0px 5px;
+  width: 400px; /* Fixed width */
+  max-width: 400px; /* Prevent stretching */
+}
+
+/*#buttons targets the container of buttons (the div with id="buttons").
+#buttons button targets each individual button inside the #buttons container.*/
+
+#display {
+  background-color: black;
+  color: white;
+  text-align: right;
+  font-size: 90px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#buttons { /*parents*/
+  display: grid; /* Use CSS Grid to layout the buttons */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns for buttons */
+  gap: 8px; /* Add spacing between buttons (both rows and columns) */
+  padding: 8px; /* Add padding around the entire grid area */
+}
+
+#buttons button { /*children*/
+  background-color: #505050; /* Set button background color to a grayish tone */
+  color: white; /* Set the button text color to white for contrast */
+  font-size: 36px; /* Make the text inside buttons big enough for easy reading */
+  text-align: center; /* Center the text inside the button */
+  width: 80px; /* Set the button width to 80px */
+  height: 80px; /* Set the button height to 80px to make them square */
+  border-radius: 40px; /* Round the edges to create a circular button */
+  border: none; /* Remove the default border for a cleaner look */
+}
+
+#buttons button:hover { /*hover button using mouse*/
+  opacity: 70%;
+}
+
+#buttons button:active { /*click button using mouse*/
+  opacity: 90%;
+}
